@@ -3,6 +3,8 @@ package rars.util;
 import rars.Globals;
 import rars.Settings;
 
+
+
 import java.io.*;
 import java.nio.channels.FileChannel;
 import java.nio.charset.StandardCharsets;
@@ -143,6 +145,7 @@ public class SystemIO {
     public static void printString(String string) {
         if (Globals.getGui() == null) {
             System.out.print(string);
+            Globals.my_out = Globals.my_out + string;
         } else {
             print2Gui(string);
         }
