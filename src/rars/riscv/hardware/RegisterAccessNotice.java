@@ -38,21 +38,30 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 public class RegisterAccessNotice extends AccessNotice {
     private String registerName;
+    private int registerNumber;
 
     /**
      * Constructor will be called only within this package, so assume
      * register number is in valid range.
      */
-    RegisterAccessNotice(int type, String registerName) {
+    RegisterAccessNotice(int type, String registerName, int registerNumber) {
         super(type);
         this.registerName = registerName;
+        this.registerNumber = registerNumber;
+    }
+
+    /**
+     * Fetch the register name of register accessed.
+     */
+    public String getRegisterName() {
+        return registerName;
     }
 
     /**
      * Fetch the register number of register accessed.
      */
-    public String getRegisterName() {
-        return registerName;
+    public int getRegisterNumber() {
+        return registerNumber;
     }
 
     /**

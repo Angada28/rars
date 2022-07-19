@@ -171,9 +171,8 @@ public class Register extends Observable {
     private void notifyAnyObservers(int type) {
         if (this.countObservers() > 0) {// && Globals.program != null) && Globals.program.inSteppedExecution()) {
             this.setChanged();
-            this.notifyObservers(new RegisterAccessNotice(type, this.name));
+            this.notifyObservers(new RegisterAccessNotice(type, this.name, this.number));
         }
     }
-
 
 }
