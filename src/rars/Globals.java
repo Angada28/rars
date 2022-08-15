@@ -152,7 +152,7 @@ public class Globals {
         gui = g;
     }
 
-    public static String my_out = "";
+    public static String output = "";
     public static VenusUI getGui() {
         return gui;
     }
