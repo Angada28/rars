@@ -145,7 +145,7 @@ public class SystemIO {
     public static void printString(String string) {
         if (Globals.getGui() == null) {
             System.out.print(string);
-            Globals.my_out = Globals.my_out + string;
+            Globals.output = Globals.output + string;
         } else {
             print2Gui(string);
         }
